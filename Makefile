@@ -6,7 +6,7 @@
 #    By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/02/15 18:51:03 by aakkaya           #+#    #+#              #
-#    Updated: 2022/02/15 20:28:39 by aakkaya          ###   ########.fr        #
+#    Updated: 2022/02/15 20:29:21 by aakkaya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,5 +45,5 @@ bonus: $(OBJS) $(BONUS_OBJS)
 	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 git:
 	git add .
-	git commit -m "m"
+	git commit -m "libft"
 	git push
