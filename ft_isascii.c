@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 18:54:58 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/15 19:06:21 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/02/16 10:41:08 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_isascii(int c)
 {
-	if(c >= 0 && c <=127)
+	if (c >= 0 && c <= 127)
 		return (1);
 	return (0);
 }
-/*.c
+/*
 int main(void)
 {
 	char c;

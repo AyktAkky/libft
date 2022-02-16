@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:57:02 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/15 18:03:03 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/02/15 21:21:58 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_isdigit(int c)
 		return (1);
 	return (0);
 }
-/*.c
+/*
 int main(void)
 {
 	char c;

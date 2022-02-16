@@ -1,29 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 14:38:56 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/15 21:22:08 by aakkaya          ###   ########.fr       */
+/*   Created: 2022/02/15 20:30:30 by aakkaya           #+#    #+#             */
+/*   Updated: 2022/02/16 10:46:30 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//eger karakter alfabede yer alıyorsa herhangi bir sayı değilse sıfır çevirir.
 
-int	ft_isalpha(int c)
+size_t	ft_strlen(const char *str)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	size_t	i;
+
+	i = 0;
+	while (str[i] != '\0')
+	i++;
+	return (i);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char c;
-
-	c = '2';
-	printf("%d", ft_isalpha(c));
-}*/
+	char str[] = "kek";
+	int uzunluk = ft_strlen(str);
+	printf("%d", uzunluk);
+}
+*/

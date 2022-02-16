@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 19:17:29 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/15 20:26:23 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/02/16 10:41:47 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_isprint(int c)
 {
-	if(c >= 32 && c <= 126)
+	if (c >= 32 && c <= 126)
 		return (1);
 	return (0);
 }
-/*.c
+/*
 int main(void)
 {
 	char c;

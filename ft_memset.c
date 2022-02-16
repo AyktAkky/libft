@@ -1,29 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/15 14:38:56 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/15 21:22:08 by aakkaya          ###   ########.fr       */
+/*   Created: 2022/02/15 21:31:59 by aakkaya           #+#    #+#             */
+/*   Updated: 2022/02/16 10:45:00 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//eger karakter alfabede yer alıyorsa herhangi bir sayı değilse sıfır çevirir.
 
-int	ft_isalpha(int c)
+void	*ft_memset(void *str, int c, size_t n)
 {
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		return (1);
-	return (0);
+	char	*ptr;
+	size_t	len;
+
+	len = 0;
+	ptr = (char *)str;
+	while (len < n)
+	{
+		ptr[len] = c;
+		len++;
+	}
+	return (ptr);
 }
 /*
-int	main(void)
+int main(void)
 {
-	char c;
-
-	c = '2';
-	printf("%d", ft_isalpha(c));
-}*/
+	char dizi[] = "komodo";
+	printf("%s", ft_memset(dizi, 'x', 3));
+	return (0);
+}
+*/
