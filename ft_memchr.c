@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <string.h>
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
@@ -21,6 +22,8 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	nc = (unsigned char)c;
 	dizi = (unsigned char *)s;
+	if(n == 0)
+	return (NULL);
 	while(i <= n)
 	{
 		if(dizi[i] == nc)
@@ -36,6 +39,6 @@ int main(void)
 {
 	char dizi[] = "alalalpeem";
 	
-	printf("%s", ft_memchr(dizi, 'p', 10));
-}
-*/
+	printf("%s\n", ft_memchr(dizi, 'a',0));
+	printf("%s\n", memchr(dizi, 'a',0));
+}*/
