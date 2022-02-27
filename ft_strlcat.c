@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 19:13:24 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/27 03:50:54 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/02/27 11:52:18 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,14 +19,14 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t i;
 	size_t j;
 
-	destlen = strlen(dest);
-	srclen = strlen(src);
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen(src);
 	i = 0;
 	j = destlen;
 
-	if(destlen < size - 1 && size > 0)
+	if (destlen < size - 1 && size > 0)
 	{
-		while(src[i] != '\0' && destlen + i < size - 1)
+		while (src[i] != '\0' && destlen + i < size - 1)
 		{
 			dest[j]=src[i];
 			i++;
@@ -34,6 +34,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		}
 		dest[j] = '\0';
 	}
+	if (destlen >= size)
+		destlen = size;
 	return (destlen + srclen);
 }
 /*
@@ -46,4 +48,4 @@ int	main()
 	printf("%d", ft_strlcat(dest,src, 10));
 }
 //byte ı kendimiz belirlememizin sebebi eger dest i tanımsız bıraksaydık içindeki ilk dizi kadar byte a sahip olacaktı
-//sonradan sonuna birşey koyamayız. 
+//sonradan sonuna birşey koyamayız. */

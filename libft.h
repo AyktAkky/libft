@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 14:23:56 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/20 09:53:03 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/02/27 14:59:52 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdlib.h>
 # include <string.h>
 
-
+//part1
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
 int		ft_isascii(int c);
@@ -31,6 +31,7 @@ int     ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 void	*ft_memset(void *str, int c, size_t n);
 void	*ft_bzero(void *s, size_t n);
@@ -39,6 +40,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 
 size_t	ft_strlen(const char *str);
-
+size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+size_t	ft_strlcat(char *dest, const char *src, size_t size);
 
 #endif
