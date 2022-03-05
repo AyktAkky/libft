@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 14:23:56 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/03/06 01:38:20 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/06 01:45:48 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,10 @@ void	*ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dst, const void *src, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+
 
 size_t	ft_strlen(const char *str);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
