@@ -24,11 +24,11 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	dizi = (unsigned char *)s;
 	if(n == 0)
 	return (NULL);
-	while(i <= n)
+	while(i < n)
 	{
 		if(dizi[i] == nc)
 		{
-			return (&((unsigned char *)s)[i]);;
+			return (&((unsigned char *)s)[i]);
 		}
 		i++;
 	} 

@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:18:00 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/03/05 21:57:27 by aakkaya          ###   ########.fr       */
+/*   Created: 2022/03/05 22:25:01 by aakkaya           #+#    #+#             */
+/*   Updated: 2022/03/05 22:27:08 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strtrim(char const *s1, char const *set)
 {
-	void	*ptr;
+	size_t	i;
 
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, 0, (count * size));
-	return (ptr);
+	if (!s1 || !set)
+		return (0);
+	while (*s1 && ft_strchr(set, *s1))
+		s1++;
+	i = ft_strlen(s1);
+	while (i && ft_strchr(set, s1[i]))
+		i--;
+	return (ft_substr(s1, 0, i + 1));
 }
-// mallocta count çarpı size kadar alan açmamızın sebebi
-// her biri için yer açılır toplar isek belirli bir bölmünü alır
-// geri kalanına yer açmaz
+/*
+strchr ile kesilecek char ı buldugu sürece hep bir byte atlayıp bulamayınca
+o noktadan kesen(bunu iki taraf için yapar) ve kesilmiş hali yeni bir string olarak bize geri döndürür.
+*/

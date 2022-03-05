@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/20 01:48:40 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/20 12:12:37 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/05 21:59:05 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ void	*ft_memmove(void *dst, const void *src, size_t n)
             return (dst);
         }
     }
+    return (dst);
 }
 /*
 int main(void)

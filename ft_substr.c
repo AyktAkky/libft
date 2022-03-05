@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:18:00 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/03/05 21:57:27 by aakkaya          ###   ########.fr       */
+/*   Created: 2022/03/05 21:46:02 by aakkaya           #+#    #+#             */
+/*   Updated: 2022/03/05 21:46:07 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	void	*ptr;
+	char	*new_str;
+	size_t	i;
+	size_t	j;
 
-	ptr = malloc(count * size);
-	if (!ptr)
-		return (NULL);
-	ft_memset(ptr, 0, (count * size));
-	return (ptr);
+	new_str = (char *)malloc(len + 1);
+	if (!s || !new_str)
+		return (0);
+	i = start;
+	j = 0;
+	while (i < ft_strlen(s) && j < len)
+		new_str[j++] = s[i++];
+	new_str[j] = '\0';
+	return (new_str);
 }
-// mallocta count çarpı size kadar alan açmamızın sebebi
-// her biri için yer açılır toplar isek belirli bir bölmünü alır
-// geri kalanına yer açmaz

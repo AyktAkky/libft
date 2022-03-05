@@ -1,27 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/05 18:18:00 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/03/05 21:57:27 by aakkaya          ###   ########.fr       */
+/*   Created: 2022/03/05 21:51:55 by aakkaya           #+#    #+#             */
+/*   Updated: 2022/03/05 22:00:13 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*ptr;
+	char	*new;
+	size_t	first;
+	size_t	total;
 
-	ptr = malloc(count * size);
-	if (!ptr)
+	if (!s1 || !s2)
 		return (NULL);
-	ft_memset(ptr, 0, (count * size));
-	return (ptr);
+	first = ft_strlen(s1) + 1;
+	total = ft_strlen(s2) + first;
+	new = (char *)malloc(total * sizeof(char));
+	if (!new)
+		return (NULL);
+	ft_strlcpy(new, s1, first);
+	ft_strlcat(new, s2, total);
+	return (new);
 }
-// mallocta count çarpı size kadar alan açmamızın sebebi
-// her biri için yer açılır toplar isek belirli bir bölmünü alır
-// geri kalanına yer açmaz
+/*
+strlcpy ile s1 i new e kopyalıyoruz.
+strlcat ile s2 ve new i total kadar birleştiriyoruz.
+*/
