@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 14:37:54 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/27 14:57:27 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/24 11:48:43 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	}
 	return (0);
 }
+
 /*
 int main(void)
 {
@@ -61,5 +62,6 @@ needle = arayacağımız kısım
 
 len = bizim aranacak kısmı belirlediğimiz aralık. 
 
-h + n < len dememizin sebebi h+n in toplamının her zaman bizim istediğimiz aralıktan küçük olması gerektiğidir. 
+h + n < len dememizin sebebi h+n in toplamının her zaman bizim
+istediğimiz aralıktan küçük olması gerektiğidir. 
 */

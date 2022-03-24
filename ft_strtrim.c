@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/05 22:25:01 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/03/06 00:38:22 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/24 11:11:56 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 		i--;
 	return (ft_substr(s1, 0, i + 1));
 }
+
 /*
 strchr ile kesilecek char ı buldugu sürece hep bir byte atlayıp bulamayınca
-o noktadan kesen(bunu iki taraf için yapar) ve kesilmiş hali yeni bir string olarak bize geri döndürür.
+o noktadan kesen(bunu iki taraf için yapar) ve kesilmiş hali yeni bir string
+olarak bize geri döndürür.
 */

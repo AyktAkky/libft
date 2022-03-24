@@ -17,21 +17,21 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*dizi;
 	unsigned char	nc;
-	int	i;
+	int				i;
 
 	i = 0;
 	nc = (unsigned char)c;
 	dizi = (unsigned char *)s;
-	if(n == 0)
-	return (NULL);
-	while(i < n)
+	if (n == 0)
+		return (NULL);
+	while (i < n)
 	{
-		if(dizi[i] == nc)
+		if (dizi[i] == nc)
 		{
 			return (&((unsigned char *)s)[i]);
 		}
 		i++;
-	} 
+	}
 	return (NULL);
 }
 /*

@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 19:15:26 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/20 15:21:25 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/24 11:47:35 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,6 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 	i = 0;
 	if (size == 0)
 		return (0);
-		
 	while (i < (size - 1) && ((s1[i] != '\0') || (s2[i] != '\0')))
 	{
 		if (s1[i] != s2[i])
@@ -28,6 +27,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t size)
 	}
 	return (((unsigned char *)s1)[i] - ((unsigned char *)s2)[i]);
 }
+
 /*
 int main(void)
 {

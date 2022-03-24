@@ -6,7 +6,7 @@
 /*   By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/26 18:23:14 by aakkaya           #+#    #+#             */
-/*   Updated: 2022/02/27 13:03:31 by aakkaya          ###   ########.fr       */
+/*   Updated: 2022/03/24 11:46:31 by aakkaya          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	if (size > 0)
@@ -30,6 +30,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 		i++;
 	return (i);
 }
+
 /*
 int main(void)
 {
@@ -37,8 +38,12 @@ int main(void)
 	char src[] = "coucou";
 	int i;
 
-	i = 1;
+	i = 4;
 	//printf("%d", ft_strlcpy(dst, src, i));
-	printf("%d", strlcpy(dst, src, i));
+
+	printf("%lu", ft_strlcpy(dst, src, i));
+	printf("\n%s", dst);
+
 }
 */
+// size -1 in sebebi örnegin 4 harf kopyalanacaksa indis 0 dan başlaması için 
