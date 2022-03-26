@@ -17,7 +17,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*dizi;
 	unsigned char	nc;
-	int				i;
+	size_t			i;
 
 	i = 0;
 	nc = (unsigned char)c;

@@ -5,44 +5,34 @@
 #                                                     +:+ +:+         +:+      #
 #    By: aakkaya <aakkaya@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/02/15 18:51:03 by aakkaya           #+#    #+#              #
-#    Updated: 2022/02/15 20:29:21 by aakkaya          ###   ########.fr        #
+#    Created: 2022/03/26 21:09:12 by aakkaya           #+#    #+#              #
+#    Updated: 2022/03/26 21:12:30 by aakkaya          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME=libft.a
 
-SRCS=$(wildcard *.c)
+NAME = libft.a
+FLAG = -Wall -Wextra -Werror
+SRC = $(shell find . ! -name "ft_lst*.c" -name "ft_*.c")
+BONUS = *.c
+OBJ = $(SRC:.c=.o)
 
-OBJS=$(SRCS:.c=.o)
-
-BONUS=
-
-BONUS_OBJS=$(BONUS:.c=.o)
-
-CC=gcc
-CFLAGS=-I. -Wall -Wextra -Werror
-
-.PHONY: all clean fclean re bonus git
 
 all: $(NAME)
 
-$(NAME): $(OBJS)
-	ar rcs $(NAME) $(OBJS)
-
-%.o: %.c $(DEPS)
-	$(CC) -c $^
-
+$(NAME):
+	gcc $(FLAG) -c $(SRC)
+	ar rc $(NAME) *.o
+bonus:
+	gcc $(FLAG) -c $(BONUS)
+	ar rc $(NAME) *.o
 clean:
-	rm -f $(OBJS) $(BONUS_OBJS)
-
+	/bin/rm -f  *.o
 fclean: clean
-	rm -f $(NAME)
+	/bin/rm -f $(NAME)
 
-re: fclean $(NAME)
+re: fclean all
 
-bonus: $(OBJS) $(BONUS_OBJS)
-	ar rcs $(NAME) $(OBJS) $(BONUS_OBJS)
 git:
 	git add .
 	git commit -m "libft"
